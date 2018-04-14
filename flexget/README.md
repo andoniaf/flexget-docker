@@ -1,7 +1,7 @@
 flexget
 ====
 
-Flexget container with subliminal for the subtitles. Ready to be integrated with transmission.
+Flexget container with subliminal for the subtitles. Ready to be integrated with transmission (https://github.com/andoniaf/flexget-docker).
 
 ## Run
 

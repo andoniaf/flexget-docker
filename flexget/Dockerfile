@@ -10,8 +10,6 @@ RUN mkdir -p /root/.flexget \
 
 VOLUME ["/root/.flexget"]
 
-CMD ["/usr/local/bin/flexget", "--loglevel", "info", "daemon", "start"]
-
 RUN pip install -I subliminal
 
 RUN mkdir -p /root/flexget /root/.config /shows /transmission
@@ -20,7 +18,6 @@ COPY start.sh /root/flexget/start.sh
 COPY config_base.yml /root/flexget/config_base.yml
 
 ENV SUBTITLE_LANGUAGE="en"
-ENV RSS_URL="http://your_feed_url"
 
 ENTRYPOINT ["/root/flexget/start.sh"]
 CMD ["--loglevel", "debug", "daemon", "start"]
