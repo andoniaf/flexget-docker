@@ -1,4 +1,3 @@
-#FROM kmb32123/flexget-dockerfile
 FROM python:3.5
 
 RUN pip install --upgrade setuptools
@@ -12,7 +11,7 @@ VOLUME ["/root/.flexget"]
 
 CMD ["/usr/local/bin/flexget", "--loglevel", "info", "daemon", "start"]
 
-RUN pip install -I subliminal 
+RUN pip install -I subliminal
 
 RUN mkdir -p /root/flexget /root/.config /shows /transmission
 
