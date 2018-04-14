@@ -38,7 +38,7 @@ flexget-docker
 	    -p 9091:9091 -p 51413:51413 -p 51413:51413/udp \
 	    andoniaf/transmission
 
- # Run the transmission container
+ # Run the flexget container
 docker run --name flexget -d --volumes-from transmission -v "${PATH_TO_SHOWS}:/shows" \
 	    -v "${PWD}/assets_flexget:/root/.flexget" \
 	    -e "RSS_URL=${RSS_URL}" \

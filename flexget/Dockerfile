@@ -20,7 +20,7 @@ COPY start.sh /root/flexget/start.sh
 COPY config_base.yml /root/flexget/config_base.yml
 
 ENV SUBTITLE_LANGUAGE="en"
-ENV RSS_URL="noop"
+ENV RSS_URL="http://your_feed_url"
 
 ENTRYPOINT ["/root/flexget/start.sh"]
 CMD ["--loglevel", "debug", "daemon", "start"]
